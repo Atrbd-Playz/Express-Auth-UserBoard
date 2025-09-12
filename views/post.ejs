@@ -1,0 +1,58 @@
+<!-- post.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=post.title%> | Authentication | Backend Project 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .post-image-container {
+            max-height: 70vh;
+            /* Set maximum height for the image container */
+            /* overflow: hidden; */
+        }
+
+        .post-image-container img {
+            width: 100%;
+            /* Ensure the image fills its container */
+            height: auto;
+            /* Let the height adjust automatically to maintain aspect ratio */
+            object-fit: cover;
+            /* Preserve aspect ratio and fit the entire image within the container */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Return button -->
+    <button onclick="window.history.back()" class="return-button absolute text-white left-5 top-5 p-3 text-[22px] z-10 transition-all rounded-[50%] items-center w-10 h-10 ml-1 mt-1 bg-gray-100 hover:bg-gray-200 ">
+
+
+        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="h-[1.1234rem] relative left-0 top-0 " enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="#231F20" points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 2.049,15.584 -0.035,13.5 "/></svg>
+
+
+    </button>
+
+    <div class="container mx-auto px-4 py-8 sm:flex sm:gap-4">
+        <div class="post-image-container">
+            <!-- Display the post image at the top of the page -->
+            <img class="rounded-md drop-shadow-2xl" src="<%= post.image %>" alt="Post Image">
+        </div>
+        <div class="mt-8 drop-shadow-xl bg-slate-100 p-3 rounded-md sm:w-full h-full">
+            <!-- Display the post title -->
+            <h1 class="sm:text-3xl text-2xl font-semibold tracking-tight block w-full sm:tracking-normal text-gray-900 ">
+                <%= post.title %>
+            </h1>
+            <!-- Display the post content with HTML line breaks -->
+            <p class="mt-4 text-lg text-gray-700 sm:tracking-normal tracking-tight sm:text-justify">
+                <%- post.content %>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
