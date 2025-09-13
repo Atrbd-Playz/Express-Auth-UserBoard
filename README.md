@@ -1,4 +1,4 @@
-# 📌 MERN-auth-crud-Postboard
+# 📌 Express-auth-crud-Postboard
 
 A **MERN stack** application featuring 🔐 **custom authentication**, ✍️ **CRUD operations**, and a 🎨 **Pinterest-inspired user page** UI.  
 Built to demonstrate full-stack development with MongoDB, Express, React, and Node.js.
@@ -114,3 +114,4 @@ You’re free to use, modify, and share.
 ## 🌟 Show your support
 
 If you like this project, please ⭐ the repo!  
+
